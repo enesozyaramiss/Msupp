@@ -1,0 +1,239 @@
+This is my background:
+
+Enes Ozyaramis 
+(+39) 351 798 99 57 | enesozyaramiss@gmail.com | linkedin.com/in/enesozyaramis | github.com/enesozyaramiss
+Apulia, Italy
+
+
+EXPERIENCE
+Data Scientist — eResult s.r.l (Jan 2024 – Present, Apulia, Italy)
+- Designed and deployed LLM-based solutions for crop hail prediction (92% accuracy), integrating satellite and tabular data via AWS-hosted microservices.
+- Designed and deployed LLM-based RAG pipelines and Ollama-hosted AI microservices for knowledge retrieval in agriculture and healthcare.
+- Performed LLM fine-tuning, quantization, and distillation to optimize performance and latency in production.
+- Built and maintained containerized AI services (Docker, Kubernetes) deployed to AWS cloud.
+- Integrated event-driven data pipelines (MSSQL) with AI-driven workflows, including Plan Tool Navigator (PTN).
+- Benchmarked and optimized LLM and vision models on cloud accelerators to reduce inference cost.
+
+Senior Analytics Analyst — Experian (Nov 2021 – Jan 2024, Istanbul, Turkey)
+- Designed AI-driven income estimation model and production pipeline with monitoring and performance tracking.
+- Developed IFRS9 and IRB compliant credit risk models and supported regulatory processes.
+- Deployed risk scoring, credit limit optimization, and loan default prediction models for banks.
+- Automated credit/income assessment workflows, cutting manual work and improving cycle times by 35%.
+- Developed AI-based vehicle price prediction models for lending decisions.
+- Contributed to LLM prompt engineering for CRM and marketing personalization.
+
+AI Engineer Intern — Techmax Technology (Dec 2020 – Nov 2021, Izmir, Turkey)
+- Applied deep learning CV algorithms (CNNs, YOLO) for transport/industrial applications.
+- Built real-time egg counting and smart beverage inventory systems with object detection.
+- Developed license plate recognition system with OCR, integrated with SQL reporting.
+
+EDUCATION
+BSc Electrical and Electronics Engineering, Dokuz Eylul University, Izmir, Turkey
+
+TECHNICAL SKILLS
+Languages & Frameworks: Python, SQL, PyTorch, TensorFlow, Hugging Face, LangChain, Keras, scikit-learn
+LLM & NLP: LLMs, RAG, Fine-tuning, Prompt Engineering, Transformers
+Computer Vision: CNN, Object Detection, Image Classification, OpenCV
+MLOps & Cloud: AWS, Azure, Docker, Kubernetes, CI/CD
+Tools: Git, REST APIs, Streamlit, MLflow, Weights & Biases
+Specializations: Model Optimization, Distributed Training, Data Pipelines, Visualization
+
+Q: Can you please introduce yourself and walk me through your background?
+A: Hello, my name is Enes and I'm originally from Turkey, currently based in Italy. I hold an EU Blue Card, which gives me work authorization across the EU. I have over 5 years of experience as a Data Scientist and AI Engineer, I found the chance to work in Finance, healthcare and IT sectors. In my previous roles, I worked as a consultant for Tier 1 banks and led end-to-end AI/ML projects — from model development to monitoring and risk evaluation. I'm particularly excited about this opportunity because it brings together two things I care deeply about: AI innovation and responsible, risk-aware deployment.
+
+Q: Why are you interested in this role?
+A: I’m interested in this role because it connects two important things  for me: AI/ML and risk management. I have experience developing AI models and also monitoring them to make sure they work well and safely. In my past projects, I worked with global banks, so I understand the importance of control and compliance. I also enjoy working with different teams like business, IT and risk — and this role includes all of that. That’s why I think I can be a good fit for this position.
+
+Q: Why do you want to work at BNP Paribas?
+A: I want to work at BNP Paribas because it’s one of the most respected global banks with a strong focus on innovation and responsibility. This role fits my background well because I have experience in building models and ensuring they are safe and compliant. I want to contribute to making AI solutions more reliable and explainable in a regulated environment like banking.
+
+Q: What are your strengths and weaknesses?
+A: My strength is working well with both technical and business people. I can explain AI results in a simple way. My weakness is that sometimes I spend too much time checking my work. I’m learning to focus more on what is most important.
+
+Q: Where do you see yourself in 5 years?
+A: In 5 years, I see myself in a more senior role where I can take more responsibility in guiding AI governance across departments. I would also like to mentor team members and support the company’s AI risk strategy at a higher level.
+
+Q: How do you handle stress or pressure?
+A: When I’m under pressure, I try to stay calm and break the problem into smaller steps. For example, in one project, a last-minute change in the model requirements caused delays. I prioritized the tasks, communicated clearly with the team, and we delivered on time.
+
+Q: Describe a time when you identified a risk in an AI/ML project. How did you handle it?
+A: In one project, I saw that our model was unfairly rejecting some users. I realized it was a risk, so I told the team. We checked the data, added more balanced samples, and retrained the model. After that, it worked more safe and compliant.
+
+Q: Have you ever worked on model governance or AI compliance topics?
+A: Yes, after completing end-to-end ML projects, I prepared detailed documentation and worked with model validation teams to get my models approved. I followed model governance practices such as performance monitoring, and bias detection
+
+Q: How do you ensure that AI models are explainable and fair?
+A: To make AI models explainable, I use tools like SHAP or LIME to show how features affect predictions. I also prefer models that are easy to understand, like decision trees or scorecards.
+For fairness, I check model results across different teams to detect any bias. If I find a problem, I can retrain the model with more samples, and I can fix the bugs.
+
+Q: What are the key risks of using AI/ML in banking?
+A: Using AI and machine learning in banking can be risky. Sometimes, the model can have data problems
+This can hurt some customer groups. Also, many models are hard to understand, and this is a problem in banks because they must follow rules. Another risk is about data privacy, because banks use personal and financial data. Finally, models can make more mistakes over time if the data in real life changes.
+
+Q: Can you explain what model drift is and how to manage it?
+A: Model drift happens when a machine learning model starts making more mistakes over time. This can happen because real-life data changes. For example, people’s behavior or the market can change after a few months.To manage model drift, we can monitor the model’s performance regularly. If we see the model is not working well, we can retrain it with new data.
+
+Q: Have you worked with monitoring tools for ML models?
+A: Yes, I have used monitoring tools to check how machine learning models perform after deployment. For example, I tracked accuracy and prediction errors over time. I also monitored the data regularly to check for model drift. I used tools like MLflow or custom dashboards to detect any issues early and retrain the model when necessary. 
+
+Q: How do you stay up-to-date on AI regulations and best practices?
+A: I follow AI news and updates from trusted websites like Towards Data Science and official blogs from companies like OpenAI or Google. I also read about new AI regulations from the EU and other countries. Sometimes I join online webinars or take short courses to learn about best practices in AI.
+
+Q: Tell me about a time you worked in a cross-functional team.
+A: Sure. At Experian, I worked on an AI-based income estimation model for a bank, where I collaborated with compliance, IT, and business teams.
+I made sure the model met regulatory standards like IFRS9, and I coordinated with IT to deploy it securely.
+We also created a dashboard to monitor performance and model drift.
+Thanks to the teamwork, the model was deployed 30% faster than usual and passed all audits without issues.
+
+Q: Give an example of a time when you disagreed with a teammate. How did you resolve it?
+A: Sure. At Experian, we had a disagreement over the model complexity for a banking project.
+My teammate wanted to use a complex ensemble model, but I was concerned about explainability for auditors and compliance teams.
+Instead of arguing, I proposed we test both approaches and compare them based on performance and explainability.
+In the end, we combined both — using a simple model for core decisions and the complex one for edge cases.
+It worked well and helped us collaborate better in future projects.
+
+Q: Describe a situation where you had to explain a complex technical topic to a non-technical audience.
+A: Sure. At Experian, I worked on a credit risk model for a bank.
+I had to explain it to non-technical people from risk and compliance teams.
+I used simple language and real examples — like “we group similar customers” instead of saying clustering.
+I also showed how the model helps with real decisions, like loan approvals.
+They understood it well and approved the model.
+
+Q: Tell me about a time you failed. What did you learn?
+A: Yes. Once, I focused too much on improving model performance and didn’t involve the business team early.
+As a result, we had to change many things later, and it caused delays.
+I learned that talking to business and risk teams from the beginning is just as important as building the model itself.
+
+Q: Have you ever had to push back on a business decision due to risk concerns?
+A: Yes. At Experian, the business team wanted to launch a credit model quickly.
+But I saw that the model had risk for a certain group with limited history.
+I explained the problem and suggested improvements before going live.
+They agreed to delay the launch, and in the end, the model passed all risk checks.
+
+
+Q: What are the main AI/ML risks in Corporate and Institutional Banking (CIB)?
+A: AI/ML risks in CIB include model bias, which may lead to unfair decisions; lack of explainability, making it hard to justify outcomes to regulators; data quality issues that can cause inaccurate predictions; model drift when data patterns change over time; overfitting that reduces model generalization; adversarial attacks targeting model weaknesses; and compliance risks where models fail to meet regulatory requirements.
+
+Q: What would you do if you detect bias in a model?
+A: If I detect bias, I would first analyze its source — whether it comes from data imbalance, feature selection, or the model itself. Then, I would take steps such as rebalancing the dataset, applying fairness constraints during training, or selecting a different algorithm. I would also put in place monitoring to continuously track fairness metrics after deployment.
+
+Q: What is model drift and how would you manage it as a risk?
+A: Model drift occurs when the relationship between input data and the target changes over time, causing the model's performance to degrade. To manage this, I would set up regular monitoring of performance metrics, use drift detection techniques, and schedule periodic retraining of the model using fresh data to ensure it stays relevant.
+
+Q: Why is explainability important in AI/ML? How can it be achieved?
+A: Explainability is important because it helps stakeholders and regulators understand model decisions, builds trust, and allows for easier detection of errors or biases. It can be achieved through interpretable models (like decision trees or logistic regression), or by applying tools like SHAP, LIME, or counterfactual explanations for complex models.
+
+Q: How would you assess data quality risks in AI/ML models?
+A: I would assess data quality risks by performing detailed data profiling to detect missing values, outliers, inconsistencies, or biases in the dataset. In production, I would set up automated checks to monitor for data drift or unexpected changes in data distributions, and implement alerts if issues are found.
+
+Q: Where and how should risks be controlled across the AI/ML lifecycle?
+A: Risks should be managed at every stage: during data collection (ensure data quality, privacy, fairness), model development (apply validation, testing, explainability tools), deployment (set up monitoring, drift detection), and end-of-life (proper model retirement and documentation). Strong governance and documentation are key throughout.
+
+Q: What is an adversarial attack and how can its risks be managed?
+A: An adversarial attack is when malicious inputs are designed to mislead an AI/ML model. In banking, this could mean fraud detection models being fooled. To manage this, I would use adversarial training, input validation, and regular security testing to make the models more robust.
+
+Q: How would you address the risk of overfitting in AI/ML models?
+A: To address overfitting, I would apply regularization techniques, use cross-validation, simplify the model where possible, and ensure a good balance between training and test data. Monitoring model performance on unseen data after deployment is also critical.
+
+Q: What is the role of the second line of defence in AI/ML projects?
+A: The second line of defence provides independent oversight of AI/ML risks. I review models, check risk controls, and make sure the first line (developers, business) follow policies and regulations. I also raise alerts if I see risks that could harm the bank or clients.
+
+Q: How do you communicate with business units when you identify a risk in a model?
+A: When I see a risk, first I explain it clearly to the business team using simple language, not only technical terms. I give examples of how the risk could cause problems. I also suggest solutions or mitigation steps. This helps the business team take action fast.
+
+Q: How would you monitor and report AI/ML risks as part of second line activities?
+A: I would set up regular risk reviews for AI models, including performance checks, fairness checks, and explainability. I would use dashboards and reports to show risks in a clear way, and I would report major issues to senior management and risk committees.
+
+Q: What is your escalation process when a risk alert is identified?
+A: If I find a risk alert, I first inform the model owner and business unit. If the issue is serious or not fixed on time, I escalate it to risk management leadership or a risk committee. I follow internal procedures to make sure the right people know and act.
+
+Q: How would you design a risk management framework?
+A: I would design a framework with clear steps:
+✅ Risk identification (where and how risks can happen)
+✅ Risk assessment (impact and likelihood)
+✅ Controls and monitoring (how we reduce the risks)
+✅ Reporting and escalation (who gets informed and when)
+✅ Regular review (keep the framework updated).
+It should cover all stages of AI/ML: data, model, deployment, and monitoring.
+
+Q: How would you promote a risk-aware culture across the organisation?
+A: I would promote risk awareness by:
+•Providing training to teams on AI/ML risks and responsibilities
+•Sharing clear guidelines and examples
+•Encouraging open discussion about risks, without blame
+•Working together with business and tech teams to build safe AI solutions.
+
+
+Q: Are you familiar with ECB or EBA guidance on AI/ML use?
+A: Yes, I am familiar with the key points of European Central Bank (ECB) and European Banking Authority (EBA) guidance on AI/ML. Both organisations highlight the importance of model governance, transparency, and risk management when using AI/ML in banking.
+They expect banks to:
+•Ensure explainability of models so that decisions can be understood by internal teams, clients, and regulators.
+•Have strong validation and monitoring processes for models, including independent reviews.
+•Manage risks related to data privacy, fairness, and bias.
+•Keep human oversight in the decision-making process — AI should support decisions, not fully replace human judgement.
+These guidelines help ensure that AI/ML is used in a responsible and compliant way in the banking sector.
+
+
+Q: Can you share a recent development in AI/ML regulations that you follow?
+A: Yes — I actively follow the EU AI Act, which will soon set a legal framework for AI systems across Europe. This regulation classifies AI into risk levels — for example, credit scoring models and risk assessment tools in banking will likely be considered high risk.
+In my work, for example when developing risk models at Experian or LLM-based solutions for finance at eResult, I keep in mind that high-risk AI systems will need:
+•High data quality and proper documentation
+•Explainability and human oversight
+•Ongoing monitoring for performance and fairness
+This regulation will change how AI/ML solutions are designed and deployed in banking, and I follow updates closely so I can build AI systems that are both innovative and compliant.
+
+Q: What risks does GDPR introduce in the use of AI/ML?
+
+A: GDPR introduces several key risks when using AI/ML in banking:
+•Data privacy risk: We must handle personal data carefully. For example, in my projects using customer or transactional data for credit scoring or risk models, I always ensure that data is processed lawfully and stored securely.
+•Right to explanation: AI decisions must be explainable to customers. This is why I use explainability tools like SHAP or simpler models when possible.
+•Data minimisation: We can only use the data needed for the specific purpose — no more. This influences how I select features for models.
+•Bias and fairness risks: Biased data can lead to discriminatory outcomes, which would breach GDPR and harm trust. I always include fairness checks in my model validation process.
+In short, GDPR pushes us to create AI/ML systems that are fair, privacy-aware, and transparent — principles I follow in both design and production phases.
+
+
+Q: Where is AI/ML typically used in CIB?
+A: AI/ML is widely used in CIB in areas such as credit risk modelling (like IFRS9 and IRB models I helped develop at Experian), fraud detection systems, algo trading strategies, and customer analytics for CRM and marketing. It is also used in KYC processes to automate document checks and client onboarding. In my experience, these applications improve efficiency and accuracy but require strong controls for risks like bias, drift, and compliance.
+
+Q: What are the risks of using AI in algo trading?
+A: The main risks include:
+•Overfitting, where the model works well on historical data but fails in real market conditions.
+•Low explainability, making it difficult to understand or justify trading decisions to regulators.
+•Automation risk, where errors or extreme events can cause large losses very quickly.
+To manage these, I would recommend stress testing models, setting up real-time monitoring, and ensuring human oversight to review and stop trading if needed.
+
+Q: How would you manage AI/ML risks in fraud detection systems?
+A: In fraud detection, the key risks are bias, false positives, and model drift as fraud patterns change. To manage these, I would:
+•Train models with balanced and up-to-date data.
+•Use explainability tools so alerts can be reviewed and understood.
+•Set thresholds that balance detecting fraud with reducing unnecessary alerts.
+•Continuously monitor model performance and update it when patterns shift.
+At eResult, I applied similar principles when integrating AI into business workflows to ensure decisions were both accurate and explainable.
+
+Q: Can you give an example of bias or explainability risks in AI-based credit scoring models?
+A: In credit scoring, bias risk can occur if training data reflects historical discrimination, leading the model to unfairly score certain groups. Explainability risk arises when complex models make decisions that are hard to interpret for regulators or customers. In my work on credit risk models at Experian, I addressed these risks using fairness metrics, SHAP values for explainability, and sometimes preferring simpler models in sensitive use cases to ensure transparency.
+
+Q: How do you convince stakeholders about the importance of managing AI/ML risks?
+A: I focus on showing how AI/ML risks, if unmanaged, can harm the business — for example, through regulatory penalties, reputational damage, or financial loss. At Experian, when working on credit risk models, I explained to business teams how poor model monitoring could lead to biased decisions or regulatory issues. I use simple examples and data to show the impact of risks, and I highlight how proper risk management builds trust, ensures compliance, and protects the business in the long term.
+
+Q: How would you handle a business unit that wants to proceed despite identified risks?
+A: I would first make sure they understand the risk clearly by explaining it in practical terms, not just technical language. I would provide evidence — for example, potential financial impact or compliance concerns. If they still want to proceed, I would escalate the issue through proper governance channels, as I did in cases where I identified model limitations or fairness risks at Experian. My goal is always to protect the organisation while keeping communication open and respectful.
+
+Q: Can you describe a situation where you managed a conflict related to risk management?
+A: At Experian, during the development of a credit scoring model, there was disagreement between the analytics team and business on how strict we should set thresholds to detect risky customers. The business wanted to lower thresholds to approve more applications, but this increased default risk. I organised a review session where I showed simulation results of different thresholds on portfolio performance. This helped align both sides on a balanced solution that met risk and business targets. It taught me the value of clear data-driven communication in resolving such conflicts.
+
+Q: How would you explain AI/ML risks to a non-technical audience?
+A: I would avoid technical terms and focus on practical examples. For instance, I might say: “If our model is biased, it could unfairly reject good customers or approve risky ones. If we don’t monitor it, small errors could grow and cause big problems later.” I would use simple charts or real cases to make the point clear. My experience working with business teams at Experian and eResult helped me practice explaining complex AI risks in a way that is easy to understand and actionable.
+
+Q: A new AI-powered product is about to go live. What steps would you take for risk assessment?
+A: First, I would review the data quality to ensure it is accurate, complete, and fair. Then I would check the model performance — not just accuracy, but also stability, fairness, and explainability using tools like SHAP. I would also assess the deployment environment — for example, security of APIs or microservices (something I worked on at eResult). Before go-live, I would ensure monitoring is in place for drift, bias, or unusual behaviour, and confirm that human oversight is ready for critical decisions. Finally, I would review documentation to ensure compliance with internal policies and regulations like GDPR.
+
+Q: You identified a risk in an AI model within CIB. What actions would you take step-by-step?
+A: ✅ First, I would document the risk clearly, including its impact and possible consequences.
+✅ Then, I would inform the model owner and business unit, explaining the issue in simple terms.
+✅ I would suggest practical mitigation actions — for example, retraining the model, adjusting thresholds, or adding monitoring.
+✅ If the risk is serious or no action is taken, I would escalate the issue to the risk committee or senior management, following internal governance.
+✅ Finally, I would support the team to implement the fix and verify the risk is resolved.
+
+Q: How do you balance risk management and innovation in AI/ML projects?
+A: I see risk management as something that enables innovation, not blocks it. When I worked on AI models at Experian and eResult, I made sure risk controls (like monitoring, explainability, fairness checks) were part of the design from the start. This way, the team could innovate without facing problems later. I also promote open communication with business units so that risk topics are part of the process, not an obstacle. The key is to build safe, scalable, and trusted AI solutions that meet both innovation goals and regulatory expectations.
