@@ -1,4 +1,4 @@
-# 🎤 Real-Time Interview Q&A Assistant (Whisper + Gemini)
+# 🎤 Real-Time  Q&A Assistant (Whisper + Gemini)
 
 This project is a real-time speech-to-answer assistant that listens to your voice, transcribes it with OpenAI Whisper, and responds using Google Gemini API — all through a live, minimal overlay interface.
 
@@ -22,8 +22,8 @@ This project is a real-time speech-to-answer assistant that listens to your voic
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/enesozyaramiss/Mulakatsupport.git
-cd Mulakatsupport
+git clone https://github.com/enesozyaramiss/Msupp.git
+cd Msupp
 
 python -m venv venv310
 .\venv310\Scripts\Activate.ps1   # Windows PowerShell
