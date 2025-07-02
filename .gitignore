@@ -1,0 +1,5 @@
+venv310/
+.env
+__pycache__/
+*.pyc
+ffmpeg-2025-06-17-git-ee1f79b0fa-essentials_build/
