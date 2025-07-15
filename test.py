@@ -10,15 +10,14 @@ import google.generativeai as genai
 import time
 import ctypes
 import ctypes.wintypes
+import re
 from dotenv import load_dotenv
 
 load_dotenv()
 
-
 # === WHISPER MODELİ ===
 model_whisper = whisper.load_model("tiny")
 samplerate = 48000
-#is pc si number 7
 device = 7
 recording_data = []
 recording = False
@@ -29,7 +28,7 @@ generation_config = {
     "temperature": 0.8,
     "top_p": 0.95,
     "top_k": 64,
-    "max_output_tokens": 750,
+    "max_output_tokens": 2048,
     "response_mime_type": "text/plain",
 }
 model_gemini = genai.GenerativeModel(
@@ -55,7 +54,6 @@ chat_session = model_gemini.start_chat(
 )
 
 def exclude_window_from_capture(hwnd):
-    # Windows 10 2004+ için ekran paylaşımından pencereyi hariç tut
     WDA_EXCLUDEFROMCAPTURE = 0x11
     SetWindowDisplayAffinity = ctypes.windll.user32.SetWindowDisplayAffinity
     SetWindowDisplayAffinity.argtypes = [ctypes.wintypes.HWND, ctypes.wintypes.DWORD]
@@ -67,33 +65,28 @@ def exclude_window_from_capture(hwnd):
         print("✅ Overlay excluded from screen capture.")
 
 def setup_window_exclusion(root):
-    """Setup window exclusion after the window is properly created"""
     def exclude_after_render():
-        # Wait for window to be fully rendered
         root.update_idletasks()
-        time.sleep(0.1)  # Small delay to ensure window is ready
-        
-        # Try to get HWND
+        time.sleep(0.1)
         hwnd = ctypes.windll.user32.FindWindowW(None, "Real-time Q&A Overlay")
         if hwnd:
             exclude_window_from_capture(hwnd)
         else:
             print("⚠️ HWND not found.")
-    
-    # Schedule the exclusion setup after window creation
+
     root.after(100, exclude_after_render)
 
 def create_overlay():
     root = tk.Tk()
     root.title("Real-time Q&A Overlay")
-    root.attributes('-alpha', 0.95)  # Neredeyse opak
+    root.attributes('-alpha', 0.95)
     root.attributes('-topmost', True)
     root.geometry("700x400+100+100")
 
     text_widget = tk.Text(
         root,
-        font=("Consolas", 16, "bold"),  # Daha büyük ve kalın font
-        bg="#F0F0F0",                   # Açık gri arka plan, şeffaf hissi verir
+        font=("Consolas", 16, "bold"),
+        bg="#F0F0F0",
         fg="black",
         wrap='word',
         padx=10,
@@ -102,10 +95,7 @@ def create_overlay():
     text_widget.pack(expand=True, fill='both')
     text_widget.insert('end', "System ready. Press F9 to start recording, K to stop.\n\n")
     text_widget.config(state='disabled')
-    
-    # Setup window exclusion after window is created
     setup_window_exclusion(root)
-
     return root, text_widget
 
 def update_overlay(text_widget, message, header=None):
@@ -117,7 +107,10 @@ def update_overlay(text_widget, message, header=None):
     text_widget.see('end')
     text_widget.config(state='disabled')
 
-# === SES KAYIT ===
+def extract_code_block(text):
+    match = re.search(r"```(?:sql)?\s*(.*?)```", text, re.DOTALL)
+    return match.group(1).strip() if match else text.strip()
+
 def start_recording(text_widget):
     global recording_data, recording
     recording_data = []
@@ -146,7 +139,6 @@ def stop_recording(stream, text_widget):
 
     combined = np.concatenate(recording_data, axis=0)
     combined = combined[:, 0].astype(np.float32)
-
     target_samples = int(len(combined) * 16000 / samplerate)
     resampled = resample(combined, target_samples)
 
@@ -157,7 +149,6 @@ def stop_recording(stream, text_widget):
 
     if len(text) >= 3:
         try:
-
             message = (
                 f"You are acting as a senior data scientist being interviewed for a technical position.\n"
                 f"Here is the candidate's CV and previous Q&A examples:\n\n"
@@ -168,9 +159,8 @@ def stop_recording(stream, text_widget):
                 f"👉 If the question is general (non-technical), give a professional and concise answer.\n"
                 f"💡 Respond with only the answer — either the SQL code or the final answer — without extra formatting."
             )
-            
             response = chat_session.send_message(message)
-            short_response = trim_to_sentences(response.text, 6)
+            short_response = extract_code_block(response.text)
             update_overlay(text_widget, short_response, "Gemini Response")
             print(f"Gemini Response: {short_response}")
         except Exception as e:
@@ -180,14 +170,6 @@ def stop_recording(stream, text_widget):
         update_overlay(text_widget, "Skipping short or empty transcription.", "INFO")
         print("Skipping short or empty transcription.")
 
-def trim_to_sentences(text, max_sentences):
-    sentences = text.split('.')
-    trimmed = '.'.join(sentences[:max_sentences]).strip()
-    if not trimmed.endswith('.'):
-        trimmed += '.'
-    return trimmed
-
-# === TUŞ DİNLER ===
 def key_listener(text_widget):
     stream = None
     while True:
@@ -211,7 +193,6 @@ def key_listener(text_widget):
 
         time.sleep(0.05)
 
-# === BAŞLAT ===
 if __name__ == "__main__":
     root, text_widget = create_overlay()
     text_widget.tag_config("header", foreground="yellow", font=("Consolas", 14, "bold"))
