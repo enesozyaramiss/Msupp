@@ -8,7 +8,8 @@ from scipy.signal import resample
 import whisper
 import google.generativeai as genai
 import time
-from dotenv import load_dotenv
+import ctypes
+import ctypes.wintypes
 
 # === WHISPER MODELİ ===
 model_whisper = whisper.load_model("small")
@@ -18,14 +19,8 @@ device = 7
 recording_data = []
 recording = False
 
-# .env dosyasını yükle
-load_dotenv()
-
-# .env içinden API anahtarını al
-api_key = os.getenv("GEMINI_API_KEY")
-
 # === GEMINI AYARLARI ===
-genai.configure(api_key=api_key) # <-- API anahtarını koy
+genai.configure(api_key="AIzaSyAolhGWzJGSdQU1lphg9UYQkPNaBpcYfAw")  # <-- API anahtarını koy
 generation_config = {
     "temperature": 0.8,
     "top_p": 0.95,
@@ -55,6 +50,35 @@ chat_session = model_gemini.start_chat(
     ]
 )
 
+def exclude_window_from_capture(hwnd):
+    # Windows 10 2004+ için ekran paylaşımından pencereyi hariç tut
+    WDA_EXCLUDEFROMCAPTURE = 0x11
+    SetWindowDisplayAffinity = ctypes.windll.user32.SetWindowDisplayAffinity
+    SetWindowDisplayAffinity.argtypes = [ctypes.wintypes.HWND, ctypes.wintypes.DWORD]
+    SetWindowDisplayAffinity.restype = ctypes.wintypes.BOOL
+    result = SetWindowDisplayAffinity(hwnd, WDA_EXCLUDEFROMCAPTURE)
+    if not result:
+        print("⚠️ Failed to exclude window from capture.")
+    else:
+        print("✅ Overlay excluded from screen capture.")
+
+def setup_window_exclusion(root):
+    """Setup window exclusion after the window is properly created"""
+    def exclude_after_render():
+        # Wait for window to be fully rendered
+        root.update_idletasks()
+        time.sleep(0.1)  # Small delay to ensure window is ready
+        
+        # Try to get HWND
+        hwnd = ctypes.windll.user32.FindWindowW(None, "Real-time Q&A Overlay")
+        if hwnd:
+            exclude_window_from_capture(hwnd)
+        else:
+            print("⚠️ HWND not found.")
+    
+    # Schedule the exclusion setup after window creation
+    root.after(100, exclude_after_render)
+
 def create_overlay():
     root = tk.Tk()
     root.title("Real-time Q&A Overlay")
@@ -74,6 +98,9 @@ def create_overlay():
     text_widget.pack(expand=True, fill='both')
     text_widget.insert('end', "System ready. Press F9 to start recording, K to stop.\n\n")
     text_widget.config(state='disabled')
+    
+    # Setup window exclusion after window is created
+    setup_window_exclusion(root)
 
     return root, text_widget
 
@@ -126,15 +153,16 @@ def stop_recording(stream, text_widget):
 
     if len(text) >= 3:
         try:
-            
+
             message = (
-                f"Here is my CV and a set of sample interview Q&A pairs for context. "
-                f"CV and Q&A: {context_text} "
-                f"My question: {text} "
-                f"Step 1: Check if the question exactly matches or closely matches any Q in the Q&A list (use semantic similarity). "
-                f"Step 2: If there's a match, return **only** the corresponding A — don't change or summarize it. "
-                f"Step 3: If there's no match, generate a natural, professional answer in a friendly and concise tone (max 4-5 sentences). "
-                f"Return only the final answer, without mentioning steps or context."
+                f"You are acting as a senior data scientist being interviewed for a technical position.\n"
+                f"Here is the candidate's CV and previous Q&A examples:\n\n"
+                f"{context_text}\n\n"
+                f"The interviewer asked the following question:\n{text}\n\n"
+                f"👉 If the question is about SQL, write a valid SQL query that answers it, using best practices and common table names.\n"
+                f"👉 If the question is about Python, write clean and efficient Python code.\n"
+                f"👉 If the question is general (non-technical), give a professional and concise answer.\n"
+                f"💡 Respond with only the answer — either the SQL code or the final answer — without explanations or extra formatting."
             )
             
             response = chat_session.send_message(message)
