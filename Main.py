@@ -20,7 +20,7 @@ recording_data = []
 recording = False
 
 # === GEMINI AYARLARI ===
-genai.configure(api_key="AIzaSyAolhGWzJGSdQU1lphg9UYQkPNaBpcYfAw")  # <-- API anahtarını koy
+genai.configure(api_key="GEMINI_API_KEY")  # <-- API anahtarını koy
 generation_config = {
     "temperature": 0.8,
     "top_p": 0.95,
