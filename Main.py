@@ -10,6 +10,10 @@ import google.generativeai as genai
 import time
 import ctypes
 import ctypes.wintypes
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # === WHISPER MODELİ ===
 model_whisper = whisper.load_model("small")
@@ -20,7 +24,7 @@ recording_data = []
 recording = False
 
 # === GEMINI AYARLARI ===
-genai.configure(api_key="GEMINI_API_KEY")  # <-- API anahtarını koy
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 generation_config = {
     "temperature": 0.8,
     "top_p": 0.95,
